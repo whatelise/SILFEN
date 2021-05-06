@@ -1,0 +1,284 @@
+
+
+h1 {font-size: 2.5;}
+
+main {
+  width: 100VW;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.info {
+  display: block;
+}
+.search {
+  width: calc(100%);
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+form > * {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.finalCheckout h1 {padding-top: 1em;}
+
+.finalCheckout > * {padding-bottom: 1em;}
+
+
+.firstName,
+.lastName {
+  width: calc(45%);
+  position: relative;
+  /*  display: inline-flex; */
+  height: 60px;
+  overflow: hidden;
+}
+
+.firstName {
+  margin-right: 10%;
+}
+
+.fullName {
+  width: 100%;
+  display: inline-flex;
+  align-content: space-between;
+}
+
+.search input,
+.firstName input,
+.lastName input {
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.search label,
+.firstName label,
+.lastName label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+  color: dimgray;
+}
+
+.search label::after,
+.firstName label::after,
+.lastName .label-name::after {
+  content: "";
+  left: 0%;
+  bottom: -2px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: translateX(-100%);
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.4s ease;
+}
+
+.search input:focus + .label-name .content-name,
+.search input:valid + .label-name .content-name,
+.firstName input:focus + .label-name .content-name,
+.firstName input:valid + .label-name .content-name,
+.lastName input:focus + .label-name .content-name,
+.lastName input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  opacity: 0.3;
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: all 0.28s ease;
+}
+
+.btn {
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  margin-top: 2em;
+  margin-right: 1em;
+  padding: 0.5em;
+  border: none;
+
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {transform: scale(0.98);}
+
+.btn:disabled {background-color: lightgray; }
+
+section {
+  margin: 10vw;
+}
+
+.cartOverview {
+  background-color: skyblue;
+}
+
+.progress-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.progress-container::before {
+  content: "";
+  background-color: lightgray;
+  position: absolute;
+  top: 160%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 3px;
+  width: 100%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.progress {
+  background-color: black;
+  position: absolute;
+  top: 160%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 3px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circle {
+  height: 1em;
+  color: lightgray;
+  /*  width:1em; */
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  color: black;
+  background-color: white;
+}
+
+.progressPlacement{
+  padding-bottom: 0em;
+}
+
+.mask {
+    overflow: hidden;
+}
+
+#formContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5%;
+  width: 400%;
+  transition: 0.4s ease;
+}
+
+.info {
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+.clickNext {
+  transform: translateX(-100%);
+  transition: 0.4s ease;
+}
+
+.clickPrev {
+  transform: translateX(100%);
+  transition: 0.4s ease;
+}
+
+.info2 {
+  position: fl;
+}
+
+
+/* PAYMENT RADIO BUTTONS */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  height: 1em;
+  width: 1em;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: dimgray;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 0.25em;
+	left: 0.25em;
+	width: 0.5em;
+	height: 0.5em;
+	border-radius: 50%;
+	background: white;
+}
+
+.dissapear {opacity: 0;
+  transition: all 0.28s ease;
+}

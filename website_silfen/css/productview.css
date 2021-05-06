@@ -1,0 +1,124 @@
+main {
+  padding: 4em;
+  background-color: rgb(236, 236, 236);
+}
+
+h1.name {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+h3 {
+  margin-top: 1rem;
+}
+
+h4 {
+  margin-bottom: 2em;
+  padding: 0;
+}
+
+/* DISPLAY PRODUCT */
+.hidden {
+  display: none;
+}
+
+/*BUTTON SHOP*/
+.button {
+  margin-top: 3rem;
+}
+
+button {
+  float: left;
+}
+.add-button {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: solid 1px black;
+  padding: 1.5em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition-duration: 0.4s;
+  margin-top: 2em;
+}
+
+.add-button span {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.shop-button {
+  background-color: black;
+  border: solid 1px black;
+  color: white;
+  padding: 1.5em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition-duration: 0.4s;
+  margin-top: 2em;
+}
+
+.shop-button:hover {
+  background-color: #e3ff36;
+  border: solid 1px#e3ff36;
+  color: black;
+}
+
+.detailItem > * {
+  margin-bottom: 0.5em;
+}
+
+/* COLOR PICKER*/
+.colorpicker {
+  display: flex;
+}
+.colorpicker > * {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 7.5em;
+  margin: 1em 1em 1em 0em;
+}
+
+.colorpicker2 {
+  display: flex;
+}
+
+/* RELATED COLOR PICKER*/
+.colorpicker2 > * {
+width:1.5em;
+height: 1.5em;
+border-radius: 7.5em;
+margin:1em 1em 1em 0em;}
+
+.otherProducts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 2rem;
+  grid-gap: 3rem;
+}
+
+.colours {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 850px) {
+  .saleItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+    margin-bottom: 2em;
+    margin-top: 3em;
+  }
+}
+
+@media only screen and (max-width: 849px) {
+  .saleItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+}

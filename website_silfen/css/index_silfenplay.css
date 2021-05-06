@@ -1,0 +1,193 @@
+.buttonSlide1 {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  color: #e3ff36;
+}
+#slideshow {
+  background-color: #e3ff36;
+}
+
+#collection {
+  background-color: #e3ff36;
+  padding: 3%;
+}
+/*MOST WANTED*/
+#mostWanted {
+  background-color: #f3f3f3a9;
+  padding: 3%;
+}
+.name {
+  font-size: 2em;
+}
+.collection {
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.colours {
+  font-size: 0.9em;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+/*BUTTON SHOP*/
+
+button {
+  float: left;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.add-button {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: black;
+  padding: 1em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition-duration: 0.4s;
+  margin-top: em;
+}
+
+.add-button span {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.shop-button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 1em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition-duration: 0.4s;
+  margin-top: em;
+}
+
+.shop-button:hover {
+  background-color: #e3ff36;
+  border: solid 1px#e3ff36;
+  color: black;
+}
+
+/*END MOST WANTED*/
+
+.collectionList {
+  padding: 5%;
+}
+
+.newCollection {
+  display: flex;
+  align-items: baseline;
+}
+
+.starNew {
+  width: 8vw;
+  height: 8vw;
+  background-repeat: no-repeat;
+  background-image: url(/links/star-new.svg);
+  background-size: 100%;
+}
+.rotation {
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+a {
+  margin: 0;
+  padding: 0;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (min-width: 800px) {
+  .buttonSlide1 {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    color: #e3ff36;
+  }
+
+  #slideshow {
+    display: inline-flex;
+    flex-direction: row;
+    flex-grow: 1;
+  }
+
+  .slide {
+    display: block;
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+  }
+
+  .starNew {
+    width: 8vw;
+    height: 8vw;
+    background-repeat: no-repeat;
+    background-image: url(/links/star-new-2.svg);
+    background-size: 100%;
+  }
+}
+/*MOST WANTED*/
+
+.mwbag {
+  /* display: flex;
+    width: 100%; */
+  padding-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+
+@media only screen and (max-width: 799px) {
+  .mwbag {
+    padding-top: 5%;
+    display: block;
+    padding: 30px;
+  }
+  .saleItem {
+    padding-bottom: 20px;
+  }
+  .buttonSlide1 {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    color: #e3ff36;
+  }
+  .video2 {
+    display: none;
+  }
+  #slideshow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide {
+    display: block;
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+  }
+  .starNew {
+    width: 15vw;
+    height: 15vw;
+    background-repeat: no-repeat;
+    background-image: url(/links/star-new-2.svg);
+    background-size: 100%;
+  }
+}

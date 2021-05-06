@@ -1,0 +1,47 @@
+/*Silfen Stars*/
+
+body {
+  background-color: #7bafd4;
+}
+main {
+  margin: 2rem 4rem;
+}
+.silfenStarFeed {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+h1 {
+  color: #e3ff36;
+}
+h3 {
+  width: 60%;
+}
+.stars span {
+  position: relative;
+  display: inline-block;
+  animation: fadeOut 3s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* @-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} */

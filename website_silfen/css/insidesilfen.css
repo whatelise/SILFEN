@@ -1,0 +1,33 @@
+.div1 {
+  padding: 2rem 4rem;
+}
+.div2 {
+  padding: 2rem 4rem;
+  background-color: #b3e8ef;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+.container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}
+p {
+  line-height: 1.5rem;
+}
+.img1 {
+  padding: 1rem;
+  width: 80vw;
+  height: 40vw;
+  object-fit: cover;
+}
+.about {
+  padding: 1rem;
+}
+.text {
+  padding: 1rem;
+}
